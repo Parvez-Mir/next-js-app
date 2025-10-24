@@ -13,6 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: docker build . -t ${{secrets.DOCKERHUB_PASSWORD}}/test-app
-    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin 
-    - run: docker push ${{secrets.DOCKERHUB_PASSWORD}}/test-app:latest
+    - run: docker build . -t parvez9809/test-app
+    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u parvez9809 --password-stdin 
+    - run: docker push parvez9809/test-app:latest
